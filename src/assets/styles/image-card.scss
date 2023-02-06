@@ -1,0 +1,126 @@
+.image-grid {
+  display: flex;
+  align-items: center;
+  // justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+.card-container {
+  width: 178px;
+  height: 278px;
+  padding: 9px;
+  background: #394B61;
+  border-radius: 11px;
+  position: relative;
+  margin: 1.5rem;
+  transition: all 0.3s ease-out;
+}
+
+.card-image {
+  width: 160px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1em;
+  display: none;
+}
+
+.details.show {
+  display: block;
+}
+
+.detail-view-container {
+  width: 95%;
+  height: 390px;
+  background-color: #394B61;
+  border-radius: 11px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s;
+  justify-content: space-around;
+  margin-left: 1.5rem;
+
+  img {
+    width: 21%;
+    height: inherit;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+  }
+
+  .detail {
+    padding: 2rem 5rem 2rem 3rem;
+  }
+}
+
+.play-movie-btn {
+  background: #00E0FF;
+  border-radius: 5px;
+  padding: .5rem 2.25rem;
+  border: none;
+  outline: none;
+  min-width: 177px;
+}
+
+.watch-trailer-btn {
+  background: transparent;
+  border: 1px solid #00E0FF;
+  color: #00E0FF;
+  border-radius: 5px;
+  padding: .5rem 2.25rem;
+  outline: none;
+}
+
+@media only screen and (max-width: 575px) {
+  .image-grid {
+    justify-content: space-evenly;
+  }
+
+  .card-container {
+    width: 150px;
+    height: 250px;
+    margin: 0.75rem;
+  }
+
+  .card-image {
+    width: 135px;
+    height: 170px;
+  }
+
+  .detail-view-container {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    margin-left: 0;
+
+    img {
+      width: 100%;
+      height: 320px;
+      border-top-right-radius: 11px;
+      border-top-left-radius: 11px;
+      border-bottom-left-radius: 0;
+    }
+
+    .detail {
+      padding: 1rem;
+    }
+  }
+
+  .play-movie-btn {
+    padding: 0.5rem 1rem;
+    min-width: 137px;
+  }
+
+  .watch-trailer-btn {
+    padding: 0.5rem 1rem;
+  }
+}
